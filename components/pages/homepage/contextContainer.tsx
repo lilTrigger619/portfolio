@@ -9,7 +9,7 @@ interface Props {
 const ContextContainer:FC<Props> = ({title, children})=>{
   return (
     <>
-      <Box width="100%" marginTop="1rem">
+      <Box width="100%" my="1rem">
         <Box>
         {/* title*/}
           <Text>{title}</Text>
