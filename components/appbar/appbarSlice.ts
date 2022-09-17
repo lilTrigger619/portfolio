@@ -1,7 +1,8 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
+import type {PayloadAction} from "@reduxjs/toolkit";
 
-interface initState {
-  showMenuIcon: Boolean;
+export interface initState {
+  showMenuIcon: boolean;
 }
 
 const initialState : initState = {
@@ -12,7 +13,7 @@ const Slice = createSlice({
   name : "AppbarSlice",
   initialState,
   reducers: {
-    toggleMenu : (state) : void=> {
+    toggleMenu : (state)=> {
       state.showMenuIcon = !state.showMenuIcon;
     }
   }
