@@ -37,8 +37,9 @@ const Header: FC = () => {
                 l/d
               </Button>
               <MenuToggle onClick={toggleMobileNav} clicked={showMobileNav}/>
-              <MenuItem text="About" to="#" />
-              <MenuItem text="projects" to="#" />
+              <MenuItem text="About" to="/about" />
+              <MenuItem text="projects" to="/projects" />
+              <MenuItem text="Contact" to="/contact" />
               <MenuItem text="GitHub" to="#" />
             </HStack>
           </Flex>

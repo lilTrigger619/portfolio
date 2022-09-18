@@ -13,7 +13,6 @@ import {
 export default function Home(): NextPage {
   return (
     <Layout>
-      <HeroSection imageLocation="" />
       <Box>
         <Text>Hi there i'm Shadrack Opoku </Text>
         <Text>A full-Stack developer based in Ghana gh_flag_icon </Text>

@@ -9,9 +9,9 @@ const MobileNav:FC<{showNav:boolean}> = ({showNav})=>{
     <>
       <Box width="100%" display="flex" justifyContent="center">
         <List width="100%" display="flex" justifyContent="center" alignItems="center" flexDirection="column">
-          <ListItem><MenuItem to="#" text="About" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
-          <ListItem><MenuItem to="#" text="Projects" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
-          <ListItem><MenuItem to="#" text="Contact" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
+          <ListItem><MenuItem to="/about" text="About" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
+          <ListItem><MenuItem to="/project" text="Projects" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
+          <ListItem><MenuItem to="/contact" text="Contact" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
           <ListItem><MenuItem to="#" text="Git" isMobile={true} mDisplay={showNav ? "block":"none"}/></ListItem>
         </List>
       </Box>
