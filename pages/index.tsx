@@ -45,8 +45,7 @@ export default function Home(): NextPage {
             <ListItem>html, css</ListItem>
             <ListItem>Javascript</ListItem>
             <ListItem>Python</ListItem>
-            <ListItem>Java</ListItem>
-            <ListItem>C/C++</ListItem>
+            <ListItem>C</ListItem>
           </UnorderedList>
 
           <ListItem>Frameworks (for making work faster).</ListItem>

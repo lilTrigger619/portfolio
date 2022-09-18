@@ -1,20 +1,21 @@
 import { FC } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleMenu } from "./appbarSlice";
 import { RootState } from "../../utils/Store";
 import {useState } from "react";
 
-const MenuToggle: FC = () => {
+const MenuToggle: FC<{onClick:()=>void, clicked:boolean}> = ({onClick, clicked}) => {
   //const dispatch = useDispatch();
   const [showMenuIcon, setShowMenuIcon] = useState<boolean>(true);
   return (
     <Box
-      onClick={() => setShowMenuIcon(!showMenuIcon)}
       display={{ base: "block", md: "none" }}
     >
-      {showMenuIcon ? <AiOutlineMenu /> : <AiOutlineClose />}
+      <IconButton onClick={onClick}>
+      {!clicked ? <AiOutlineMenu /> : <AiOutlineClose />}
+      </IconButton>
     </Box>
   );
 };
