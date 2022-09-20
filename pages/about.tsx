@@ -1,4 +1,4 @@
-import type {NextPage} "next";
+import type {NextPage} from "next";
 import Layout from "../components/layout";
 
 const AboutPage:NextPage = ()=>{

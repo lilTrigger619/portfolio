@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
-import { HeroSection, ContextContainer, ReachOutForm } from "../components/pages/homepage";
+import { ContextContainer, ReachOutForm } from "../components/pages/homepage";
 import {
   Box,
   Text,
