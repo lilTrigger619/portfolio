@@ -18,7 +18,10 @@ import MobileNav from "./mobileMenuItems";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const AnimateNightColorModeIcon: FC<{children:FC, anim: boolean}> = ({ children, anim }) => (
+const AnimateNightColorModeIcon: FC<{ children: FC; anim: boolean }> = ({
+  children,
+  anim,
+}) => (
   /** animate the moon icon to come from the bottom**/
   <motion.div
     initial={{
@@ -27,14 +30,17 @@ const AnimateNightColorModeIcon: FC<{children:FC, anim: boolean}> = ({ children,
     }}
     animate={{
       opacity: anim ? 1 : 1,
-      y: anim ? 60: 0,
+      y: anim ? 60 : 0,
     }}
   >
     {children}
   </motion.div>
 );
 
-const AnimateDayColorModeIcon: FC<{children:FC, animate:boolean}> = ({children, animate})=>(
+const AnimateDayColorModeIcon: FC<{ children: FC; animate: boolean }> = ({
+  children,
+  animate,
+}) => (
   /* animte the sun icon to come from the top */
   <motion.div
     initial={{
@@ -43,28 +49,33 @@ const AnimateDayColorModeIcon: FC<{children:FC, animate:boolean}> = ({children, 
     }}
     animate={{
       opacity: animate ? 1 : 1,
-        y: animate ? -50: 0,
+      y: animate ? -50 : 0,
     }}
   >
     {children}
   </motion.div>
-)
+);
 
 const Header: FC = () => {
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
   const [animate, setAnimate] = useState<boolean>(false);
   const ButtonColor = useColorModeValue("teal", "");
-  const toggleMobileNav:void = () => {
+  const toggleMobileNav: void = () => {
     setShowMobileNav(!showMobileNav);
     console.log(showMobileNav);
   };
   const { toggleColorMode } = useColorMode();
-  const toggleTheme:void = ()=> {
+  const toggleTheme: void = () => {
     toggleColorMode();
-  }
+  };
   return (
     <>
-      <Box as="nav" postion="fixed">
+      <Box
+        as="nav"
+        position="fixed"
+        width="100%"
+        style={{backdropFilter: "blur(14px)" }}
+      >
         <Container my={2} maxW="3xl">
           <Flex mx={2} justify="space-between">
             <Logo />
@@ -79,10 +90,14 @@ const Header: FC = () => {
                 }}
               >
                 {useColorModeValue(
-                  <AnimateNightColorModeIcon anim={useColorModeValue(false,true)}>
+                  <AnimateNightColorModeIcon
+                    anim={useColorModeValue(false, true)}
+                  >
                     <FaMoon />
                   </AnimateNightColorModeIcon>,
-                  <AnimateDayColorModeIcon animate={useColorModeValue(true, false)}>
+                  <AnimateDayColorModeIcon
+                    animate={useColorModeValue(true, false)}
+                  >
                     <FaSun />
                   </AnimateDayColorModeIcon>
                 )}

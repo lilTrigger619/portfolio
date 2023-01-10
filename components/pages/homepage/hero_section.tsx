@@ -1,14 +1,16 @@
 import type{FC} from "react";
-import {Box, Text, Image} from "@chakra-ui/react";
+import {Box, Text, Image, useBreakpointValue} from "@chakra-ui/react";
 
 
 const Hero: FC<{imageLocation:string}> = ({imageLocation})=>{
+  const bp = useBreakpointValue(["xs", "sm", "md", "lg" ]);
+  console.log({bp});
   return(
     <>
-      <Box display="flex" mt={9} justifyContent="center" width="100%" height="13rem" border="1px solid black">
+      <Box  display="flex" my={1} justifyContent="center" width={bp == "xs" ? "80%":"70%"} height="auto" >
         {
           imageLocation ? 
-          (<Image boxSize="70px" src={imageLocation}/>):
+          (<Image  src={imageLocation} loading="lazy" fit/>):
           (<Box>Sorry image could not be loaded...</Box>)
         }
       </Box>

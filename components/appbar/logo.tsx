@@ -5,7 +5,7 @@ const Logo :FC = (props)=>{
   return (
     <>
       <Box {...props}>
-        <Text fontSize="lg" fonWeigth="bold">
+        <Text fontSize="lg" fontWeight="bold">
           Shaddy_dev
         </Text>
       </Box>
