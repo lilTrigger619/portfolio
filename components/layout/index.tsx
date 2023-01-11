@@ -1,31 +1,40 @@
-import {FC} from "react";
+import { FC, useState, useEffect } from "react";
 import {
-  Container, 
+  Container,
   ColoModeView,
   useColorModeValue,
   Box,
 } from "@chakra-ui/react";
 import Appbar from "../appbar";
-import {HeroSection} from "../pages/homepage";
-import {useSelector} from "react-redux";
+import { HeroSection } from "../pages/homepage";
+import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
-const Layout : FC<FC>= ({children})=>{
-  const CodingImageTheme = useColorModeValue<string, string>("/day_coding_copy.gif","/night_coding.gif")
+const Layout: FC<FC> = ({ children }) => {
+  const route = useRouter();
+  const CodingImageTheme = useColorModeValue<string, string>(
+    "/day_coding_copy.gif",
+    "/night_coding.gif"
+  );
+  const [showHeroSection, setShowHeroSection] = useState<boolean>(true);
   //const AllState = useSelector(state=>state);
   //console.log({AllState});
+  useEffect(() => {
+    if ((route.pathname == "/contact")) setShowHeroSection(false);
+    else setShowHeroSection(true);
+  }, [route.isReady]);
   return (
     <>
       <Box>
-        <Appbar/>
-        <Box mb="5rem"/>
+        <Appbar />
+        <Box mb="5rem" />
         <Container maxW="2xl" centerContent>
-          <HeroSection imageLocation={CodingImageTheme}/>
+          {showHeroSection && <HeroSection imageLocation={CodingImageTheme} />}
           {children}
         </Container>
       </Box>
     </>
-  )
+  );
 };
-
 
 export default Layout;

@@ -73,6 +73,8 @@ const Header: FC = () => {
       <Box
         as="nav"
         position="fixed"
+        top="0"
+        zIndex="5"
         width="100%"
         style={{backdropFilter: "blur(14px)" }}
       >
@@ -110,8 +112,8 @@ const Header: FC = () => {
             </HStack>
           </Flex>
         </Container>
+        <MobileNav showNav={showMobileNav} />
       </Box>
-      <MobileNav showNav={showMobileNav} />
     </>
   );
 };

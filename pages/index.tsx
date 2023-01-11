@@ -78,6 +78,7 @@ export default function Home(): NextPage {
           best tech stack to get job done and has being growing his knowledge
           base ever since.
         </Text>
+
         <br />
         <Button
           size="md"
@@ -96,9 +97,10 @@ export default function Home(): NextPage {
             <ListItem>
               {" "}
               <Text as="span" fontWeight="800">
-                Entry level Developer
+                Web-developer
               </Text>{" "}
-              . <br /> Ghana Communication Technology University(GCTU) (2020).
+              <br />
+              Building projects and applying for jobs.
             </ListItem>
             <ListItem>
               <Text as="span" fontWeight="800">
@@ -113,10 +115,18 @@ export default function Home(): NextPage {
           <UnorderedList>
             <ListItem>
               <Text as="span" fontWeight="800">
-              Secondary school .
+              Secondary school.
               </Text>{" "}
                 <br /> Odorgonnoh Senior Secondary Schooo
               (OSSA) (2019).
+            </ListItem>
+            <ListItem>
+              {" "}
+              <Text as="span" fontWeight="800">
+                Learning web development
+              </Text>{" "}
+              <br />
+              Started learning web development
             </ListItem>
           </UnorderedList>
           <br />
@@ -141,7 +151,6 @@ export default function Home(): NextPage {
             <ListItem>html, css</ListItem>
             <ListItem>Javascript</ListItem>
             <ListItem>Python</ListItem>
-            <ListItem>C</ListItem>
           </UnorderedList>
 
           <ListItem>Frameworks (for making work faster).</ListItem>
