@@ -17,12 +17,12 @@ import {
 } from "@chakra-ui/react";
 
 export default function Home(): NextPage {
-  const bp = useBreakpointValue(["xs", "sm", "md", "lg" ]);
+  const bp = useBreakpointValue(["xs", "sm", "md", "lg"]);
   return (
     <Layout page="about">
-      <br/>
+      <br />
       <Center
-        width={bp == "xs" ? "100%":"90%"}
+        width={bp == "xs" ? "100%" : "90%"}
         height="3rem"
         bg={useColorModeValue("gray.100", "blue.800")}
         p=".3rem"
@@ -89,6 +89,26 @@ export default function Home(): NextPage {
         </Button>
       </ContextContainer>
 
+      <ContextContainer title="Skills">
+        <UnorderedList>
+          <ListItem>
+            <strong>Skill highlights</strong>
+          </ListItem>
+          <Text>
+            Web developer | Full-stack developer | Front-end development |
+            Back-end developement | Linux system Administration.
+          </Text>
+          <br />
+          <ListItem>
+            <strong>Programming languages, frameworks and markup languages.</strong>
+          </ListItem>
+          <Text>
+            Markdown (MD) | Html | Css | Javascript | Typescript | Python | C |
+            React | Redux | Nextjs | Django | Django-rest-framework{" "}.
+          </Text>
+        </UnorderedList>
+      </ContextContainer>
+
       {/*Bio*/}
       <ContextContainer title="Bio">
         <UnorderedList>
@@ -104,10 +124,9 @@ export default function Home(): NextPage {
             </ListItem>
             <ListItem>
               <Text as="span" fontWeight="800">
-              Tertiary .
+                Tertiary .
               </Text>{" "}
-                <br /> Ghana Communication Technology University(GCTU)
-              (2020).
+              <br /> Ghana Communication Technology University(GCTU) (2020).
             </ListItem>
           </UnorderedList>
           <br />
@@ -115,10 +134,9 @@ export default function Home(): NextPage {
           <UnorderedList>
             <ListItem>
               <Text as="span" fontWeight="800">
-              Secondary school.
+                Secondary school.
               </Text>{" "}
-                <br /> Odorgonnoh Senior Secondary Schooo
-              (OSSA) (2019).
+              <br /> Odorgonnoh Senior Secondary Schooo (OSSA) (2019).
             </ListItem>
             <ListItem>
               {" "}
@@ -134,16 +152,23 @@ export default function Home(): NextPage {
           <UnorderedList>
             <ListItem>
               <Text as="span" fontWeight="800">
-              Completed basic education. 
+                Completed basic education.
               </Text>{" "}
-              <br /> Little Roses preperatory school
-              (2016).
+              <br /> Little Roses preperatory school (2016).
             </ListItem>
           </UnorderedList>
         </UnorderedList>
       </ContextContainer>
 
       {/*get in touch*/}
+      {/*contact form*/}
+      <ContextContainer title="Reach out">
+        <ReachOutForm />
+      </ContextContainer>
+    </Layout>
+  );
+}
+/*
       <ContextContainer title="skills">
         <UnorderedList>
           <ListItem>Languages</ListItem>
@@ -164,10 +189,4 @@ export default function Home(): NextPage {
         </UnorderedList>
       </ContextContainer>
 
-      {/*contact form*/}
-      <ContextContainer title="Reach out">
-        <ReachOutForm />
-      </ContextContainer>
-    </Layout>
-  );
-}
+ * */
