@@ -14,14 +14,15 @@ interface menuItemNode {
   path?: string;
   isMobile: string;
   mDisplay: string;
+  underline: boolean;
 };
 
-const MenuItem: FC<menuItemNode> = ({to, text, path, mDisplay, isMobile})=>{
+const MenuItem: FC<menuItemNode> = ({to, text, path, mDisplay, isMobile, underline})=>{
   const IsActive = text == path;
   const inActiveColor = useColorModeValue<string, string>("gray200", "whiteAlpha900")
   return(
     <Box display={isMobile ? mDisplay : ["none", "none", "block"]}>
-        <Link p={2} _active={inActiveColor} as={NextLink} href={to}>{text}</Link> 
+      <Link p={2} _active={inActiveColor} as={NextLink} href={to} textDecoration={underline ? "underline" : "none"}>{text}</Link> 
     </Box>
   )
 }
