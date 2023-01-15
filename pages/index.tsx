@@ -1,6 +1,12 @@
 import type { NextPage } from "next";
 import Layout from "../components/layout";
-import { ContextContainer, ReachOutForm } from "../components/pages/homepage";
+import { BiLinkExternal } from "react-icons/bi";
+import {
+  ContextContainer,
+  ReachOutForm,
+  Bio,
+  ProjectCard,
+} from "../components/pages/homepage";
 import {
   Box,
   Text,
@@ -14,6 +20,9 @@ import {
   HStack,
   Image,
   useBreakpointValue,
+  Divider,
+  SimpleGrid,
+  Link,
 } from "@chakra-ui/react";
 
 export default function Home(): NextPage {
@@ -71,13 +80,18 @@ export default function Home(): NextPage {
           Accra in Ghana with his family. Being the only child of his parents,
           he really got acquinted with his personal computer from a very young
           age. mostly for gaming and touch typing. Shadrack was then introduced
-          to programming by a friend link_to_phish_linkdin. On being enlightend
-          for the first time about programming, he decided to venture into it.
-          That was when the journey of a thousand miles began. Picking up course
-          on udemy and following tutorials on youtube. He manage to find the
-          best tech stack to get job done and has being growing his knowledge
-          base ever since.
+          to programming by a friend
+          <Link href="#">
+            {" "}
+            link_to_phish_linkdin
+          </Link>
+          . On being enlightend for the first time about programming, he decided
+          to venture into it. That was when the journey of a thousand miles
+          began. Picking up course on udemy and following tutorials on youtube.
+          He manage to find the best tech stack to get job done and has being
+          growing his knowledge base ever since.
         </Text>
+            <BiLinkExternal />
 
         <br />
         <Button
@@ -100,93 +114,108 @@ export default function Home(): NextPage {
           </Text>
           <br />
           <ListItem>
-            <strong>Programming languages, frameworks and markup languages.</strong>
+            <strong>
+              Programming languages, frameworks and markup languages.
+            </strong>
           </ListItem>
           <Text>
             Markdown (MD) | Html | Css | Javascript | Typescript | Python | C |
-            React | Redux | Nextjs | Django | Django-rest-framework{" "}.
+            React | Redux | Nextjs | Django | Django-rest-framework .
           </Text>
         </UnorderedList>
       </ContextContainer>
 
       {/*Bio*/}
       <ContextContainer title="Bio">
-        <UnorderedList>
-          <ListItem>2020 - Till date.</ListItem>
-          <UnorderedList>
-            <ListItem>
-              {" "}
-              <Text as="span" fontWeight="800">
-                Web-developer
-              </Text>{" "}
-              <br />
-              Building projects and applying for jobs.
-            </ListItem>
-            <ListItem>
-              <Text as="span" fontWeight="800">
-                Tertiary .
-              </Text>{" "}
-              <br /> Ghana Communication Technology University(GCTU) (2020).
-            </ListItem>
-          </UnorderedList>
-          <br />
-          <ListItem>2016 - 2020.</ListItem>
-          <UnorderedList>
-            <ListItem>
-              <Text as="span" fontWeight="800">
-                Secondary school.
-              </Text>{" "}
-              <br /> Odorgonnoh Senior Secondary Schooo (OSSA) (2019).
-            </ListItem>
-            <ListItem>
-              {" "}
-              <Text as="span" fontWeight="800">
-                Learning web development
-              </Text>{" "}
-              <br />
-              Started learning web development
-            </ListItem>
-          </UnorderedList>
-          <br />
-          <ListItem>Birth - 2016.</ListItem>
-          <UnorderedList>
-            <ListItem>
-              <Text as="span" fontWeight="800">
-                Completed basic education.
-              </Text>{" "}
-              <br /> Little Roses preperatory school (2016).
-            </ListItem>
-          </UnorderedList>
-        </UnorderedList>
+        <Bio />
       </ContextContainer>
 
-      {/*get in touch*/}
+      <ContextContainer title="Pinned projects">
+        <SimpleGrid spacing="1rem" columns={[1, 2, 3]}>
+          <ProjectCard
+            image_src="/glock_blue.jpg"
+            summary="Still not able
+            to restore your session?
+            Sometimes a tab is causing
+            the issue. View previous
+            tabs, remove the checkmark
+            from the tabs you don’t
+            need to recover, and
+            then restore."
+            title="Test title"
+            langs={["js", "html", "js", "html", "css", "json", "sh"]}
+          />
+          <ProjectCard
+            image_src="/glock_blue.jpg"
+            summary="Still not able
+            to restore your session?
+            Sometimes a tab is causing
+            the issue. View previous
+            tabs, remove the checkmark
+            from the tabs you don’t
+            need to recover, and
+            then restore."
+            title="Test title"
+            langs={["js"]}
+          />
+          <ProjectCard
+            image_src="/glock_blue.jpg"
+            summary="Still not able
+            to restore your session?
+            Sometimes a tab is causing
+            the issue. View previous
+            tabs, remove the checkmark
+            from the tabs you don’t
+            need to recover, and
+            then restore."
+            langs={["js"]}
+            title="Test title"
+          />
+          <ProjectCard
+            image_src="/glock_blue.jpg"
+            summary="Still not able
+            to restore your session?
+            Sometimes a tab is causing
+            the issue. View previous
+            tabs, remove the checkmark
+            from the tabs you don’t
+            need to recover, and
+            then restore."
+            langs={["js"]}
+            title="Test title"
+          />
+          <ProjectCard
+            image_src="/glock_blue.jpg"
+            summary="Still not able
+            to restore your session?
+            Sometimes a tab is causing
+            the issue. View previous
+            tabs, remove the checkmark
+            from the tabs you don’t
+            need to recover, and
+            then restore."
+            langs={["js"]}
+            title="Test title"
+          />
+        </SimpleGrid>
+        <br />
+        <br />
+        <Text textAlign="center" color="teal.500" textDecoration="underline">
+          <Link href="#">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View all{" "}
+            <strong>pinned projects</strong> and <strong>other projects</strong>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </Link>
+        </Text>
+      </ContextContainer>
+
+      <br />
+
       {/*contact form*/}
+      <Divider />
       <ContextContainer title="Reach out">
         <ReachOutForm />
       </ContextContainer>
     </Layout>
   );
 }
-/*
-      <ContextContainer title="skills">
-        <UnorderedList>
-          <ListItem>Languages</ListItem>
-          <UnorderedList>
-            <ListItem>html, css</ListItem>
-            <ListItem>Javascript</ListItem>
-            <ListItem>Python</ListItem>
-          </UnorderedList>
-
-          <ListItem>Frameworks (for making work faster).</ListItem>
-          <UnorderedList>
-            <ListItem>React / Nextjs</ListItem>
-            <ListItem>Django / Django-rest-framework</ListItem>
-            <ListItem>Bootstrap</ListItem>
-            <ListItem>Chakra-ui</ListItem>
-            <ListItem>Material-ui</ListItem>
-          </UnorderedList>
-        </UnorderedList>
-      </ContextContainer>
-
- * */
