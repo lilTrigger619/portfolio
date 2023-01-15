@@ -60,7 +60,7 @@ export default function Home(): NextPage {
               Opoku Shadrack.
             </Text>
             <Text as="p" fontSize="1.1rem">
-              Artist / Developer / Linux Admin
+              Developer / Linux Enthusiast / Entreprenuer
             </Text>
           </Box>
           <Circle
@@ -132,6 +132,7 @@ export default function Home(): NextPage {
 
       <ContextContainer title="Pinned projects">
         <SimpleGrid spacing="1rem" columns={[1, 2, 3]}>
+          <Center>
           <ProjectCard
             image_src="/glock_blue.jpg"
             summary="Still not able
@@ -144,7 +145,10 @@ export default function Home(): NextPage {
             then restore."
             title="Test title"
             langs={["js", "html", "js", "html", "css", "json", "sh"]}
+
           />
+          </Center>
+          <Center>
           <ProjectCard
             image_src="/glock_blue.jpg"
             summary="Still not able
@@ -158,6 +162,8 @@ export default function Home(): NextPage {
             title="Test title"
             langs={["js"]}
           />
+          </Center>
+          <Center>
           <ProjectCard
             image_src="/glock_blue.jpg"
             summary="Still not able
@@ -171,6 +177,8 @@ export default function Home(): NextPage {
             langs={["js"]}
             title="Test title"
           />
+          </Center>
+          <Center>
           <ProjectCard
             image_src="/glock_blue.jpg"
             summary="Still not able
@@ -184,6 +192,8 @@ export default function Home(): NextPage {
             langs={["js"]}
             title="Test title"
           />
+          </Center>
+          <Center>
           <ProjectCard
             image_src="/glock_blue.jpg"
             summary="Still not able
@@ -197,6 +207,7 @@ export default function Home(): NextPage {
             langs={["js"]}
             title="Test title"
           />
+          </Center>
         </SimpleGrid>
         <br />
         <br />
