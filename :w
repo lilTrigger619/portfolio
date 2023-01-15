@@ -60,7 +60,7 @@ export default function Home(): NextPage {
               Opoku Shadrack.
             </Text>
             <Text as="p" fontSize="1.1rem">
-              Developer / Linux Enthusiast / Entreprenuer
+              Artist / Developer / Linux Admin
             </Text>
           </Box>
           <Circle

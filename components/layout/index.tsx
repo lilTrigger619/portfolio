@@ -6,6 +6,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Appbar from "../appbar";
+import Footer from "./footer";
 import { HeroSection } from "../pages/homepage";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
@@ -28,10 +29,11 @@ const Layout: FC<FC> = ({ children }) => {
       <Box>
         <Appbar />
         <Box mb="5rem" />
-        <Container maxW="2xl" centerContent>
+        <Container maxW="2xl" centerContent minHeight="75vh">
           {showHeroSection && <HeroSection imageLocation={CodingImageTheme} />}
           {children}
         </Container>
+        <Footer/>
       </Box>
     </>
   );
