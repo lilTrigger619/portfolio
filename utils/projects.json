@@ -1,0 +1,88 @@
+[
+  {
+    "name": "Quick Pomo",
+    "stack": ["html", "css", "vanilla js", "json", "parcel", "bootstrap"],
+    "gallery": ["#"],
+    "coverPhoto": "#",
+    "liveUrl": "#",
+    "github": "#",
+    "documentation": {
+      "features": [
+        " No user registration required ",
+        " minimal resource usage (Can run in browser side by side with whatever you are doing ",
+        " Minimal settings and configurations for customizing the : focus-time, short-break-time, long-break-time, rounds, notifications, and sound ",
+        " Data is stored locally on your device reducing bandwidth usage and network disturbances. ",
+        "Mobile responsive which makes it available on mobile devices and other devices with small screens."
+      ],
+      "summary": "Quick Pomo is a pomodoro application built for productivity and efficiency.\n This project started off as a simple timer app. As time went on I continued to build on it to make more efficient and light weight as possible by building it with pure javascript (no framework) and bundling with parcel which is abit lighter than webpack.",
+      "how": [
+        " Created a timer class which handles all the timing activities, (pause/play, count-down) with methods to set the timer in seconds. ",
+        "Created a json string of the settings and properties of the timer  and saved in the local storage of the browser which is parsed to json and loaded into the browser",
+        "Used the canvas api to draw the animated circle which reduces based on the amount of timer remaining."
+      ],
+      "why": " As a simple guy who works with time, i always want to track my progress and work within a measurable time. I used to set 50min count-down on my phone and take a coffe break every 5min after the 50min is over. Then on the web, i came across the term POMODORO. This is actually a study technique were the individual study for 25min for four (4) rounds with a 5min break interval, then take a whole 10min break after completing the four rounds. This spooked my interest as it was inline with what i was already doing. I searched online for software applications built for this particular purpose on the web. Shockingly, all the apps didn't suit my request very well. About 80% of the apps required registration for such a simple app before you can add some basic settings or customizations.The rest felt heavey in terms of resource usage since i want to be using it on the same laptop i work with side by side. Then it hit me! I too am a developer why no solve this problem.  ",
+      "lessons": [
+        " Learn't alot more about eventListeners and how more and more heaps are created when not removed by references with the $.removeEventListener. ",
+        " Gained more knowledge in $.setTimeouts and $.setIntervals. They too have to be removed by reference when no longer in use. ",
+        " Implemented the canvas api which i had already used to build silly animations. More experience on the use of the $.requestAnimationFrame for redrawing the canvas without noticing any frame changes ",
+        " Learn't how to style a generic component (input type-range) and using javascript to manipulate the css background color on every change. "
+      ]
+    }
+  },
+
+  {
+    "name": "Apollo",
+    "stack": [
+      "Reactjs",
+      "NextJs",
+      "Js",
+      "Css",
+      "Material-ui",
+      "Material-icons",
+      "Tailwind",
+      "Chartjs",
+      "Django",
+      "Django-rest-framework"
+    ],
+    "gallery": ["#"],
+    "coverPhoto": "#",
+    "liveUrl": "#",
+    "github": "#",
+    "documentation": {
+      "features": [
+        "Authentication with web tokens",
+        "Different pages for Admin, Staff, & Student",
+        " Creating multiple choice quizes at  convinience",
+        "Add/remove/deactivate student(s) in a class room",
+        "Admin can create Fees data",
+        "Admin / staff can post a general news on the new-board and select students that can see it",
+        "Staff can view student information",
+        "create and print results slip",
+        "students can view & print their Fees data",
+        " students/staff can start a voting toll and allow some members to join-in on voting ",
+        "Students can submit assignments or attempt quizes set by staff",
+        " with a simple materialistic ui which is absolutely mobile responsive.",
+        "And many more..."
+      ],
+      "toDo": [
+        "Chating feature to communicate with teachers and class-mates",
+        ""
+      ],
+      "summary": "This is a very huge project which comprises of almost everything i have learnt in web development. This is a school student management system that does most of the important stuffs done in a school",
+      "how": [
+        " created a frontend with react /nextjs which is consuming a rest api served by django/djang-rest-framework ",
+        " using chartjs to display some charts and statistics ",
+        "Implemented a JWT(Json Web Token) for secured connection to the backend",
+        " Saved cookies in the http-requests instead of localStorage or cookies making it more secured ",
+        "Implemeted Nextjs authenticated routes for routing users based on their login type. Example: when you log in as admin, and try to visit a url known to a student acount you will be rerouted back to the homepage of the Admin."
+      ],
+      "why": " In my first year at GCTU (Ghana Communication Technology University), the school provided a web portal for every student that seen to have made atleast a half of their payment. To my suprise the student web portal did not have alot of features, we basically just used to register courses and check results slip. Then students will have to use another platform called Moodle to do quizes and assignment. The student portal also had a very bad UI. This was something that really suprised me. Because for an IT driven school... they should atleast have a professional design the site. Those were still my early days in learning how to code. (NOTE: i was in the business school just to clearify fact that i learnt to code on my own!) This then gave me an idea to create a project that does something like this and has all the features necessary and even probably sell to the school or gain employment in the school. Anyways this was my first project along the line. I'wl'd come back from time-to-time to add up to the code. The project is not completed but has undergone many updates and stages. ",
+      "lessons": [
+        " Learn't alot about security with django and django-rest-framework to write a full authentication system or resful api with secured endpoints",
+        " Broaden my knowledge on relational models in database management ",
+        " Learn't alot about security on the client side.",
+        " Worked alot with the cookies in request headers to access and refresh the authorization token."
+      ]
+    }
+  }
+]
