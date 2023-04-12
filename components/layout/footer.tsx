@@ -10,7 +10,7 @@ const Footer: FC = () => {
         <Divider />
         <br />
         <Center>
-          <Text display="flex" alignItems="center" flexWrap="wrap">
+          <Box display="flex" alignItems="center" flexWrap="wrap">
             {" "}
             This website was built with
             <Text
@@ -20,9 +20,7 @@ const Footer: FC = () => {
               display="inherit"
               alignItems="inherit"
             >
-              &nbsp;
-              Love
-              &nbsp;
+              &nbsp; Love &nbsp;
               <FaHeart />
               &nbsp;
             </Text>
@@ -37,7 +35,7 @@ const Footer: FC = () => {
               Keyboard &nbsp;
               <FaKeyboard />.
             </Text>
-          </Text>
+          </Box>
         </Center>
         <br />
       </Box>
