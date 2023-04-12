@@ -68,31 +68,19 @@ export default function Home(): NextPage {
             size="7rem"
             margin=".8rem"
           >
-            <Image src="/shadrack_face.svg" fit />
+            <Image src="/shadrack_face.svg" fit alt="Shadrack's profile image"/>
           </Circle>
         </Box>
       </Box>
 
       <ContextContainer title="About">
         <Text>
-          Shadrack is a 21 years old student pursuing a degree at Ghana
-          Communication Technology University (GCTU). He is currently based at
-          Accra in Ghana with his family. Being the only child of his parents,
-          he really got acquinted with his personal computer from a very young
-          age. mostly for gaming and touch typing. Shadrack was then introduced
-          to programming by a friend
-          <Link href="#">
-            {" "}
-            link_to_phish_linkdin
-          </Link>
-          . On being enlightend for the first time about programming, he decided
-          to venture into it. That was when the journey of a thousand miles
-          began. Picking up course on udemy and following tutorials on youtube.
-          He manage to find the best tech stack to get job done and has being
-          growing his knowledge base ever since.
+          Shadrack is a {new Date().getFullYear() - 2002} year old guy who loves being creative with a computer. 
+					He is a passionate developer with a love for Linux open source and web development. He believes in the power of collaboration 
+					and the benefits of sharing knowledge to improve technology for everyone. 
+					This portfolio showcases his expertise in developing innovative solutions with a focus on efficiency, security, and scalability.
+					He is constantly learning and exploring new technologies, and really excited to bring his skills to your next project
         </Text>
-            <BiLinkExternal />
-
         <br />
         <Button
           size="md"
