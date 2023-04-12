@@ -8,5 +8,5 @@ You can also find my contact and other important links to learn more about me.
 ---
 
 ## Screen-shots
-![Screenshot 1]("./public/screenshot_1.png")
-![Screenshot 2]("./public/screenshot_2.png")
+![Screenshot 1](public/screenshot_1.png)
+![Screenshot 2](public/screenshot_2.png)
