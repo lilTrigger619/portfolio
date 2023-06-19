@@ -1,0 +1,57 @@
+
+components/appbar/index.tsx(85,9): error TS2590: Expression produces a union type that is too complex to represent.
+components/appbar/index.tsx(103,21): error TS2322: Type 'Element' is not assignable to type 'FC'.
+  Type 'ReactElement<any, any>' provides no match for the signature '(props: {}, context?: any): ReactElement<any, any> | null'.
+components/appbar/index.tsx(108,21): error TS2322: Type 'Element' is not assignable to type 'FC'.
+components/appbar/index.tsx(113,16): error TS2739: Type '{ text: string; to: string; }' is missing the following properties from type 'menuItemNode': isMobile, mDisplay, underline
+components/appbar/index.tsx(114,16): error TS2739: Type '{ text: string; to: string; }' is missing the following properties from type 'menuItemNode': isMobile, mDisplay, underline
+components/appbar/index.tsx(115,16): error TS2739: Type '{ text: string; to: string; }' is missing the following properties from type 'menuItemNode': isMobile, mDisplay, underline
+components/appbar/index.tsx(116,16): error TS2739: Type '{ text: string; to: string; }' is missing the following properties from type 'menuItemNode': isMobile, mDisplay, underline
+components/appbar/menuItem.tsx(25,19): error TS2322: Type 'string' is not assignable to type 'SystemStyleObject | undefined'.
+components/appbar/menuToggle.tsx(16,8): error TS2741: Property '"aria-label"' is missing in type '{ children: Element; onClick: () => void; }' but required in type 'IconButtonProps'.
+components/appbar/mobileMenuItems.tsx(31,15): error TS2322: Type 'boolean' is not assignable to type 'string'.
+components/appbar/mobileMenuItems.tsx(40,15): error TS2322: Type 'boolean' is not assignable to type 'string'.
+components/appbar/mobileMenuItems.tsx(49,15): error TS2322: Type 'boolean' is not assignable to type 'string'.
+components/appbar/mobileMenuItems.tsx(57,15): error TS2322: Type 'boolean' is not assignable to type 'string'.
+components/layout/index.tsx(4,3): error TS2305: Module '"@chakra-ui/react"' has no exported member 'ColoModeView'.
+components/layout/index.tsx(14,27): error TS2339: Property 'children' does not exist on type 'FC'.
+components/pages/aboutpage/index.ts(1,30): error TS2306: File '/home/escobar619/Documents/Dev/NEXT/Projects/portfolio/components/pages/aboutpage/bio.tsx' is not a module.
+components/pages/aboutpage/index.ts(2,33): error TS2306: File '/home/escobar619/Documents/Dev/NEXT/Projects/portfolio/components/pages/aboutpage/whoAmI.tsx' is not a module.
+components/pages/aboutpage/index.ts(3,38): error TS2306: File '/home/escobar619/Documents/Dev/NEXT/Projects/portfolio/components/pages/aboutpage/whenOffline.tsx' is not a module.
+components/pages/contact/contactCard.tsx(18,11): error TS2590: Expression produces a union type that is too complex to represent.
+components/pages/contact/contactCard.tsx(23,13): error TS17001: JSX elements cannot have multiple attributes with the same name.
+components/pages/homepage/contextContainer.tsx(21,12): error TS2322: Type 'FC' is not assignable to type 'ReactNode'.
+components/pages/homepage/hero_section.tsx(13,55): error TS2322: Type 'true' is not assignable to type 'ResponsiveValue<ObjectFit> | undefined'.
+components/pages/homepage/reachOutForm.tsx(3,28): error TS2724: '"@chakra-ui/react"' has no exported member named 'FormControlLabel'. Did you mean 'FormControl'?
+components/pages/homepage/reachOutForm.tsx(16,53): error TS2322: Type '{ placeholder: string; type: "email"; label: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, keyof InputProps> & { ...; } & InputProps & { ...; }'.
+  Property 'label' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>, keyof InputProps> & { ...; } & InputProps & { ...; }'.
+middleware.ts(1,10): error TS2300: Duplicate identifier 'NextResponse'.
+middleware.ts(2,28): error TS2300: Duplicate identifier 'NextResponse'.
+middleware.ts(5,3): error TS2322: Type '[string, string]' is not assignable to type '[string]'.
+  Source has 2 element(s) but target allows only 1.
+pages/_app.tsx(11,10): error TS2322: Type '{ children: never[]; initialColorMode: "dark"; }' is not assignable to type 'IntrinsicAttributes & ColorModeScriptProps'.
+  Property 'children' does not exist on type 'IntrinsicAttributes & ColorModeScriptProps'.
+pages/about.tsx(6,6): error TS2322: Type '{ children: string; }' is not assignable to type 'FC'.
+  Type '{ children: string; }' provides no match for the signature '(props: {}, context?: any): ReactElement<any, any> | null'.
+pages/contact.tsx(7,6): error TS2322: Type '{ children: Element; }' is not assignable to type 'FC'.
+  Type '{ children: Element; }' provides no match for the signature '(props: {}, context?: any): ReactElement<any, any> | null'.
+pages/index.tsx(30,3): error TS2322: Type 'Element' is not assignable to type 'NextPage'.
+pages/index.tsx(31,6): error TS2322: Type '{ children: Element[]; page: string; }' is not assignable to type 'IntrinsicAttributes & FC'.
+  Property 'children' does not exist on type 'IntrinsicAttributes & FC'.
+pages/index.tsx(39,9): error TS2322: Type '{ children: Element; width: "100%" | "90%"; height: "3rem"; bg: "gray.100" | "blue.800"; p: ".3rem"; rounded: ".7rem"; align: string; }' is not assignable to type 'IntrinsicAttributes & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "translate" | ... 1 more ... | keyof ChakraProps> & { ...; } & ChakraProps & { ...; }'.
+  Property 'align' does not exist on type 'IntrinsicAttributes & Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "translate" | ... 1 more ... | keyof ChakraProps> & { ...; } & ChakraProps & { ...; }'.
+pages/index.tsx(71,45): error TS2322: Type 'true' is not assignable to type 'ResponsiveValue<ObjectFit> | undefined'.
+pages/index.tsx(76,8): error TS2746: This JSX tag's 'children' prop expects a single child of type 'FC', but multiple children were provided.
+pages/index.tsx(95,9): error TS2322: Type 'Element' is not assignable to type 'FC'.
+pages/index.tsx(118,9): error TS2322: Type 'Element' is not assignable to type 'FC'.
+pages/index.tsx(121,5): error TS2322: Type '{ children: never[]; title: string; }' is not assignable to type 'Props'.
+  Types of property 'children' are incompatible.
+    Type 'never[]' is not assignable to type 'FC'.
+      Type 'never[]' provides no match for the signature '(props: {}, context?: any): ReactElement<any, any> | null'.
+pages/index.tsx(124,8): error TS2746: This JSX tag's 'children' prop expects a single child of type 'FC', but multiple children were provided.
+pages/index.tsx(138,13): error TS2322: Type '[string, string, string, string, string, string, string]' is not assignable to type '[string]'.
+  Source has 7 element(s) but target allows only 1.
+pages/index.tsx(219,9): error TS2322: Type 'Element' is not assignable to type 'FC'.
+pages/index.tsx(219,10): error TS2739: Type '{}' is missing the following properties from type '{ email: string; message: string; }': email, message
+pages/project.tsx(6,6): error TS2322: Type '{ children: string; }' is not assignable to type 'FC'.
+  Type '{ children: string; }' provides no match for the signature '(props: {}, context?: any): ReactElement<any, any> | null'.

@@ -1,9 +1,9 @@
 import {Box, Text} from "@chakra-ui/react";
-import type {FC} from "react";
+import type {FC, ReactElement} from "react";
 
 interface Props {
   title : string;
-  children: FC;
+  children: ReactElement;
 }
 
 const ContextContainer:FC<Props> = ({title, children})=>{

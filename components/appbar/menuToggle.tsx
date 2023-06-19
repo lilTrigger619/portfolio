@@ -13,7 +13,7 @@ const MenuToggle: FC<{onClick:()=>void, clicked:boolean}> = ({onClick, clicked})
     <Box
       display={{ base: "block", md: "none" }}
     >
-      <IconButton onClick={onClick}>
+      <IconButton onClick={onClick} aria-label="menu toggle button">
       {!clicked ? <AiOutlineMenu /> : <AiOutlineClose />}
       </IconButton>
     </Box>

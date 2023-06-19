@@ -11,9 +11,7 @@ const initialState : initState = {
 
 const Slice = createSlice({
   name : "AppbarSlice",
-  initialState: {
-    ok: false,
-  },
+	initialState,
   reducers: {
     toggleMenu : (state, action)=> {
       state.showMenuIcon = !state.showMenuIcon;

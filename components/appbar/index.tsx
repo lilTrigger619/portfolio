@@ -18,9 +18,14 @@ import MobileNav from "./mobileMenuItems";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const AnimateNightColorModeIcon: FC<{ children: FC; anim: boolean }> = ({
+interface AnimationProps {
+	children: FC | any;
+	animate: Boolean;
+};
+
+const AnimateNightColorModeIcon: FC<AnimationProps> = ({
   children,
-  anim,
+  animate,
 }) => (
   /** animate the moon icon to come from the bottom**/
   <motion.div
@@ -29,15 +34,17 @@ const AnimateNightColorModeIcon: FC<{ children: FC; anim: boolean }> = ({
       opacity: 0.1,
     }}
     animate={{
-      opacity: anim ? 1 : 1,
-      y: anim ? 60 : 0,
+      opacity: animate ? 1 : 1,
+      y: animate ? 60 : 0,
     }}
   >
+	<>
     {children}
+	</>
   </motion.div>
 );
 
-const AnimateDayColorModeIcon: FC<{ children: FC; animate: boolean }> = ({
+const AnimateDayColorModeIcon: FC<AnimationProps> = ({
   children,
   animate,
 }) => (
@@ -52,7 +59,9 @@ const AnimateDayColorModeIcon: FC<{ children: FC; animate: boolean }> = ({
       y: animate ? -50 : 0,
     }}
   >
-    {children}
+		<>
+			{children}
+		</>
   </motion.div>
 );
 
@@ -60,12 +69,12 @@ const Header: FC = () => {
   const [showMobileNav, setShowMobileNav] = useState<boolean>(false);
   const [animate, setAnimate] = useState<boolean>(false);
   const ButtonColor = useColorModeValue("teal", "");
-  const toggleMobileNav: void = () => {
+  const toggleMobileNav: ()=>void = () => {
     setShowMobileNav(!showMobileNav);
     console.log(showMobileNav);
   };
   const { toggleColorMode } = useColorMode();
-  const toggleTheme: void = () => {
+  const toggleTheme: () => void = () => {
     toggleColorMode();
   };
   return (
@@ -83,6 +92,7 @@ const Header: FC = () => {
             <Logo />
             <HStack>
               <IconButton
+								aria-label="Color-mode toggle"
                 onClick={toggleColorMode}
                 backgroundColor={useColorModeValue("yellow.300", "teal.300")}
                 color={useColorModeValue("WhiteAlpha.800", "black")}
@@ -93,7 +103,7 @@ const Header: FC = () => {
               >
                 {useColorModeValue(
                   <AnimateNightColorModeIcon
-                    anim={useColorModeValue(false, true)}
+                    animate={useColorModeValue(false, true)}
                   >
                     <FaMoon />
                   </AnimateNightColorModeIcon>,
@@ -105,10 +115,10 @@ const Header: FC = () => {
                 )}
               </IconButton>
               <MenuToggle onClick={toggleMobileNav} clicked={showMobileNav} />
-              <MenuItem text="About 😎" to="/about" />
-              <MenuItem text="projects" to="/project" />
-              <MenuItem text="Contact 📱" to="/contact" />
-              <MenuItem text="GitHub" to="#" />
+              <MenuItem text="About 😎" to="/about" underline={false}/>
+              <MenuItem text="projects" to="/project" underline={false}/>
+              <MenuItem text="Contact 📱" to="/contact" underline={false}/>
+              <MenuItem text="GitHub" to="#" underline={false}/>
             </HStack>
           </Flex>
         </Container>

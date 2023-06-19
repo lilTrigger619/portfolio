@@ -1,7 +1,7 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, ReactElement } from "react";
 import {
   Container,
-  ColoModeView,
+  //ColoModeView,
   useColorModeValue,
   Box,
 } from "@chakra-ui/react";
@@ -11,7 +11,11 @@ import { HeroSection } from "../pages/homepage";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
-const Layout: FC<FC> = ({ children }) => {
+interface layoutProp {
+	children: FC | ReactElement | string;
+};
+
+const Layout: FC<layoutProp> = ({ children }) => {
   const route = useRouter();
   const CodingImageTheme = useColorModeValue<string, string>(
     "/day_coding_copy.gif",
@@ -30,8 +34,10 @@ const Layout: FC<FC> = ({ children }) => {
         <Appbar />
         <Box mb="5rem" />
         <Container maxW="2xl" centerContent minHeight="75vh">
+				<>
           {showHeroSection && <HeroSection imageLocation={CodingImageTheme} />}
           {children}
+					</>
         </Container>
         <Footer/>
       </Box>

@@ -5,7 +5,7 @@ import {
   ContextContainer,
   ReachOutForm,
   Bio,
-  ProjectCard,
+  BlogCard,
 } from "../components/pages/homepage";
 import {
   Box,
@@ -23,12 +23,15 @@ import {
   Divider,
   SimpleGrid,
   Link,
+	//ObjectFit,
 } from "@chakra-ui/react";
+import type {ResponsiveValue} from "@chakra-ui/react";
 
-export default function Home(): NextPage {
+export default function HomeOrAbout <NextPage> (){
   const bp = useBreakpointValue(["xs", "sm", "md", "lg"]);
   return (
-    <Layout page="about">
+    <Layout>
+		<>
       <br />
       <Center
         width={bp == "xs" ? "100%" : "90%"}
@@ -36,10 +39,9 @@ export default function Home(): NextPage {
         bg={useColorModeValue("gray.100", "blue.800")}
         p=".3rem"
         rounded=".7rem"
-        align="center"
       >
         <Text as="h3" fontSize="1.2rem">
-          Hi there i'm a full stack developer.
+          Hi there i&apos;m a full stack developer.
         </Text>
       </Center>
       <br />
@@ -68,12 +70,13 @@ export default function Home(): NextPage {
             size="7rem"
             margin=".8rem"
           >
-            <Image src="/shadrack_face.svg" fit alt="Shadrack's profile image"/>
+            <Image src="/shadrack_face.svg" fit={true as any} alt="Shadrack's profile image"/>
           </Circle>
         </Box>
       </Box>
 
       <ContextContainer title="About">
+			<>
         <Text>
           Shadrack is a {new Date().getFullYear() - 2002} year old guy who loves being creative with a computer. 
 					He is a passionate developer with a love for Linux open source and web development. He believes in the power of collaboration 
@@ -89,6 +92,7 @@ export default function Home(): NextPage {
         >
           Hit me up
         </Button>
+				</>
       </ContextContainer>
 
       <ContextContainer title="Skills">
@@ -118,10 +122,16 @@ export default function Home(): NextPage {
         <Bio />
       </ContextContainer>
 
-      <ContextContainer title="Pinned projects">
+			<ContextContainer title="Projects">
+			<>
+			</>
+			</ContextContainer>
+
+      <ContextContainer title="Blog posts">
+			<>
         <SimpleGrid spacing="1rem" columns={[1, 2, 3]}>
           <Center>
-          <ProjectCard
+          <BlogCard
             image_src="/glock_blue.jpg"
             summary="Still not able
             to restore your session?
@@ -137,7 +147,7 @@ export default function Home(): NextPage {
           />
           </Center>
           <Center>
-          <ProjectCard
+          <BlogCard
             image_src="/glock_blue.jpg"
             summary="Still not able
             to restore your session?
@@ -152,7 +162,7 @@ export default function Home(): NextPage {
           />
           </Center>
           <Center>
-          <ProjectCard
+          <BlogCard
             image_src="/glock_blue.jpg"
             summary="Still not able
             to restore your session?
@@ -167,7 +177,7 @@ export default function Home(): NextPage {
           />
           </Center>
           <Center>
-          <ProjectCard
+          <BlogCard
             image_src="/glock_blue.jpg"
             summary="Still not able
             to restore your session?
@@ -182,7 +192,7 @@ export default function Home(): NextPage {
           />
           </Center>
           <Center>
-          <ProjectCard
+          <BlogCard
             image_src="/glock_blue.jpg"
             summary="Still not able
             to restore your session?
@@ -206,6 +216,7 @@ export default function Home(): NextPage {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </Link>
         </Text>
+				</>
       </ContextContainer>
 
       <br />
@@ -215,6 +226,7 @@ export default function Home(): NextPage {
       <ContextContainer title="Reach out">
         <ReachOutForm />
       </ContextContainer>
+			</>
     </Layout>
   );
 }

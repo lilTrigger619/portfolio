@@ -10,7 +10,7 @@ const Hero: FC<{imageLocation:string}> = ({imageLocation})=>{
       <Box  display="flex" my={1} justifyContent="center" width={bp == "xs" ? "80%":"70%"} height="auto" >
         {
           imageLocation ? 
-          (<Image  src={imageLocation} loading="lazy" fit/>):
+          (<Image  src={imageLocation} loading="lazy" fit="contain"/>):
           (<Box>Sorry image could not be loaded...</Box>)
         }
       </Box>

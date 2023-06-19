@@ -18,7 +18,7 @@ const ContactCard = () => {
           <Circle
             backgroundColor="yellow"
             size="6rem"
-            margin="0px"
+            //margin="0px"
             padding="0px"
             margin="auto"
           ></Circle>

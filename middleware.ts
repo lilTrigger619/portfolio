@@ -1,7 +1,7 @@
-import { NextResponse } from "next/server";
-import type { NextRequest, NextResponse } from "next/server";
+//import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export const config: { matcher: [string] } = {
+export const config: { matcher: string[] } = {
   matcher: ["/", "/about"],
 };
 

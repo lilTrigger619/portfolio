@@ -8,8 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={Store}>
       <ChakraProvider>
-        <ColorModeScript initialColorMode="dark">
-        </ColorModeScript>
+        <ColorModeScript initialColorMode="dark"/>
         <Component {...pageProps} />
       </ChakraProvider>
     </Provider>
