@@ -4,20 +4,20 @@ const ContactCard = () => {
   return (
     <>
       <Box
-        width={["100%", "80%", "60%"]}
+        width={["100%", "80%"]}
         height="auto"
         rounded="lg"
         border="1px solid gray"
       >
-        <Box backgroundColor="red" height="7rem"></Box>
+        <Box backgroundColor="red" minHeight="9rem"></Box>
         <Box
           width="100%"
           position="relative"
-          bottom="3rem"
+          bottom="5rem"
         >
           <Circle
             backgroundColor="yellow"
-            size="6rem"
+            size="12rem"
             //margin="0px"
             padding="0px"
             margin="auto"
