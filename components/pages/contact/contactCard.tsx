@@ -1,4 +1,4 @@
-import { Box, Circle, Text } from "@chakra-ui/react";
+import { Box, Circle, Text, Table, Tbody, Tr, Td, Flex } from "@chakra-ui/react";
 
 const ContactCard = () => {
   return (
@@ -24,6 +24,16 @@ const ContactCard = () => {
           ></Circle>
           <br/> 
           <Text align="center" as="h3" fontWeight="600">Shadrack Opoku</Text>
+					<Flex direction="column" justifyContent="center" alignItems="center">
+					<Table>
+						<Tbody>
+							<Tr>
+								<Td><Text align="center">Hello</Text></Td>
+								<Td><Text align="center">Hello</Text></Td>
+							</Tr>
+						</Tbody>
+					</Table>
+					</Flex>
         </Box>
       </Box>
     </>
